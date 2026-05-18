@@ -1,25 +1,45 @@
 import { Head } from '@inertiajs/react';
 import { PlaceholderPattern } from '@/components/ui/placeholder-pattern';
 import { dashboard } from '@/routes';
+import StatsCard from '@/components/ui/statsCard';
 
 export default function Dashboard() {
     return (
-        <>
-            <Head title="Dashboard" />
-            <div className="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4">
-                <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-                    <div className="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
-                        <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
-                    </div>
-                    <div className="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
-                        <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
-                    </div>
-                    <div className="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
-                        <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
-                    </div>
-                </div>
-                <div className="relative min-h-[100vh] flex-1 overflow-hidden rounded-xl border border-sidebar-border/70 md:min-h-min dark:border-sidebar-border">
-                    <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
+        <>  
+            <div className="p-6">
+                <h1 className="text-3xl font-bold">
+                    Dashboard
+                </h1>
+            </div>
+            <div className="m-4 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <StatsCard
+                        title="Trabajos pendientes"
+                        value={12}
+                        logoUrl="/resources/js/assets/images/construction.jpg"
+                        className="col-span-1 h-50"
+                    />
+
+                    <StatsCard
+                        title="Clientes activos"
+                        value={28}
+                        logoUrl="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xpZW50JTIwY29uc3RydWN0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+                        className="col-span-1 h-50"
+                    />
+
+                    <StatsCard
+                        title="Trabajos hoy"
+                        value={5}
+                        logoUrl="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29ya2VyJTIwY29uc3RydWN0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+                        className="col-span-1 h-50"
+                    />
+                    <StatsCard
+                        title="Mapa trabajos"
+                        value={32}
+                        logoUrl="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29ya2VyJTIwY29uc3RydWN0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+                        className="md:col-span-3 h-50"
+                    />
+
                 </div>
             </div>
         </>
