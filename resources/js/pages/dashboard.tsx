@@ -12,33 +12,27 @@ export default function Dashboard() {
                 </h1>
             </div>
             <div className="m-4 gap-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <StatsCard
-                        title="Trabajos pendientes"
-                        value={12}
-                        logoUrl="/resources/js/assets/images/construction.jpg"
-                        className="col-span-1 h-50"
-                    />
-
+                <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4">
                     <StatsCard
                         title="Clientes activos"
                         value={28}
                         logoUrl="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xpZW50JTIwY29uc3RydWN0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
-                        className="col-span-1 h-50"
+                        className="col-span-1 row-span-1"
                     />
 
-                    <StatsCard
-                        title="Trabajos hoy"
-                        value={5}
-                        logoUrl="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29ya2VyJTIwY29uc3RydWN0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
-                        className="col-span-1 h-50"
-                    />
                     <StatsCard
                         title="Mapa trabajos"
                         value={32}
                         logoUrl="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29ya2VyJTIwY29uc3RydWN0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
-                        className="md:col-span-3 h-50"
+                        className="md:col-span-2 md:row-span-2 h-100"
                     />
+                    <StatsCard
+                        title="Trabajos hoy"
+                        value={5}
+                        logoUrl="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29ya2VyJTIwY29uc3RydWN0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+                        className="col-span-1 row-span-1"
+                    />
+                    
 
                 </div>
             </div>
