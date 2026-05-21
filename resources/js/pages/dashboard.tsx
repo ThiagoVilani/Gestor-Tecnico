@@ -2,6 +2,7 @@ import { Head } from '@inertiajs/react';
 import { PlaceholderPattern } from '@/components/ui/placeholder-pattern';
 import { dashboard } from '@/routes';
 import StatsCard from '@/components/ui/statsCard';
+import maps from '@/assets/images/maps.png';
 
 export default function Dashboard() {
     return (
@@ -23,7 +24,7 @@ export default function Dashboard() {
                     <StatsCard
                         title="Mapa trabajos"
                         value={32}
-                        logoUrl="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29ya2VyJTIwY29uc3RydWN0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+                        logoUrl={maps}
                         className="md:col-span-2 md:row-span-2 h-100"
                     />
                     <StatsCard
