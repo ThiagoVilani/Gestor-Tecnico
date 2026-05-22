@@ -13,7 +13,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { dashboard } from '@/routes';
+import { dashboard, clients, jobs, quotes } from '@/routes';
 import type { NavItem } from '@/types';
 
 const mainNavItems: NavItem[] = [
@@ -24,17 +24,17 @@ const mainNavItems: NavItem[] = [
     },
     {
         title: 'Trabajos',
-        href: dashboard(),
+        href: jobs(),
         icon: Wrench,
     },
     {
         title: 'Clientes',
-        href: dashboard(),
+        href: clients(),
         icon: Users,
     },
     {
         title: 'Presupuestos',
-        href: dashboard(),
+        href: quotes(),
         icon: NotebookPen,
     },
 ];

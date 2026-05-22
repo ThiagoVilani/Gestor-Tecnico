@@ -9,6 +9,10 @@ Route::inertia('/', 'welcome', [
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::inertia('dashboard', 'dashboard')->name('dashboard');
+    Route::inertia('clients', 'clients')->name('clients');
+    Route::inertia('jobs', 'jobs')->name('jobs');
+    Route::inertia('quotes', 'quotes')->name('quotes');
 });
+
 
 require __DIR__.'/settings.php';
