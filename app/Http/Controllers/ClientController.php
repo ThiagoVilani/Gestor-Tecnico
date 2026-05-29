@@ -29,11 +29,11 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         Client::Create([
-            "name" => name = $request->name;
-            "email" => email = $request->email;
-            "phone" => phone = $request->phone;
-            "adress" => adress = $request->adress;
-        ])
+            "name" => $request->name,
+            "email" =>  $request->email,
+            "phone" =>  $request->phone,
+            "address" =>  $request->address
+        ]);
 
         return redirect()->back();
         // Aca va el retorno cuando lo tenga decidido 

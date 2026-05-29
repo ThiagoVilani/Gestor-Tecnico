@@ -2,13 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
+use App\Http\Controllers\ClientController;
+
 
 Route::inertia('/', 'welcome', [
     'canRegister' => Features::enabled(Features::registration()),
 ])->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
+    //->->->->->-<-<-<-<-<-<-<-<--<-<--_>->_--<-<-<-<
     //Todo deberia estar aca dentro pero para evitar loguearme lo saco
+    //->->->->->-<-<-<-<-<-<-<-<--<-<--_>->_--<-<-<-<
 });
 
 Route::inertia('dashboard', 'dashboard')->name('dashboard');

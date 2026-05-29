@@ -10,6 +10,6 @@ class Client extends Model
         "name",
         "phone",
         "email",
-        "adress"
-    ]
+        "address"
+    ];
 }
