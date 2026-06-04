@@ -14,7 +14,7 @@ export default function NewClientForm() {
     const submit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        post('/clients', {
+        post('/clients/new', {
             onSuccess: () => {
                 reset()
                 alert("Guardado");
@@ -22,9 +22,10 @@ export default function NewClientForm() {
         });
     };
 
+
     return (
-        <form onSubmit={submit} className='flex flex-col bg-gray-800 h-70 justify-center items-center'>
-            <div className='grid grid-cols-2 grid-rows-2'>
+        <form onSubmit={submit} className='bg-red-400 flex flex-col bg-gray-800 h-70 justify-center items-center'>
+            <div className=' grid grid-cols-2 grid-rows-2'>
                 <div className="input-content flex flex-col">
                     <label>Nombre</label>
                     <input 

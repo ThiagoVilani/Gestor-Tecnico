@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Client;
+use Illuminate\Support\Facades\DB;
+use Inertia\Inertia;
 
 class ClientController extends Controller
 {
@@ -12,7 +14,10 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
+        $clients = Client::all();
+        return inertia::render('clients', [
+            'clients' => $clients
+        ]);
     }
 
     /**
@@ -20,7 +25,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        
+
     }
 
     /**
@@ -36,7 +41,6 @@ class ClientController extends Controller
         ]);
 
         return redirect()->back();
-        // Aca va el retorno cuando lo tenga decidido 
     }
 
     /**
