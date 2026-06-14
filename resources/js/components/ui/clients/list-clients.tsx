@@ -24,7 +24,8 @@ export default function ListClients({clients}: Props) {
                 </thead>
                 <tbody className="bg-zinc-900 divide-y divide-zinc-800">
                     {clients.map(client => (
-                        <tr key={client.id}>
+                        <tr key={client.id}
+                        >
                             <td className="px-6 py-4 whitespace-nowrap">{client.name}</td>
                             <td className="px-6 py-4 whitespace-nowrap">{client.email}</td>
                             <td className="px-6 py-4 whitespace-nowrap">{client.phone}</td>
@@ -36,31 +37,3 @@ export default function ListClients({clients}: Props) {
         </div>
     );
 }
-//                         <h2>Email</h2>
-//                     </div>
-//                     <div className="">
-//                         <h2>Telefono</h2>
-//                     </div>
-//                     <div className="">
-//                         <h2>Dirección</h2>
-//                     </div>
-//                 {clients.map(client => (    
-//                     <div key={client.id} className="bg-gray-500 col-span-4"> 
-//                         <div className="bg-red-400">   
-//                             <p>{client.name}</p>
-//                         </div>
-//                         <div className="">
-//                             <p>{client.email}</p>
-//                         </div>
-//                         <div className="">
-//                             <p>{client.phone}</p>
-//                         </div>
-//                         <div className="">
-//                             <p>{client.address}</p>
-//                         </div>
-//                     </div> ))}                   
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
